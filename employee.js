@@ -2,15 +2,15 @@ let employees = [];
 
 
 
-  //capitalizes the first word of Strings
+  // capitalizes the first word of Strings
   function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  // Builds each objext in the employee arra putting the (name, email, city) to employee-directory div
-  function addEmployeesToDirectory(employees) {
-    var galleryHtml = "<ul class='directory'>";
-    $.each(employees, function(i, employees) {
+// Builds each objext in the employee arra putting the (name, email, city) to employee-directory div
+function addEmployeesToDirectory(employees) {
+  var galleryHTML = "<ul class='directory'>";
+  $.each(employees, function(i, employee) {
       var firstName = capitalize(employee.name.first);
       var lastName = capitalize(employee.name.last);
       var city = capitalize(employee.location.city);
